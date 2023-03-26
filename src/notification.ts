@@ -108,8 +108,13 @@ export default class Notification {
 	private createCardComponent() {
 
 		const _this = this;
+
 		const container = document.createElement("div")
 		this.setClass("card-container", container)
+		container.addEventListener("click", function handler(e){
+			e.preventDefault()
+			_this.onCancel(container, handler)
+		})
 
 		const component = document.createElement("div")
 		this.setClass("card", component)

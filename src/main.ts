@@ -21,6 +21,12 @@ const params:NotificationParams= {
 const notification = Notifications.create(params)
 const notification2 = Notifications.create({...params, type: "notification"})
 
+Notifications.setStyle({
+  "--un-padding": "50px",
+  "--background-color": "",
+  "--un-negative-color": "red"
+})
+
 console.log(Notifications)
 
 Notifications.setTarget(target)

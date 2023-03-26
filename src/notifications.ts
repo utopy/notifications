@@ -5,6 +5,22 @@ class Notifications{
   private list: Notification[] = []
   private target: HTMLElement = null as any as HTMLElement;
 
+  public setStyle(data:{[key:string]:string}){
+
+    const root = document.querySelector(":root") as HTMLElement | null
+
+    if(!root) return
+
+    const rootStyle = getComputedStyle(root);
+    
+    for(const key of Object.keys(data ?? {})){
+
+      root.style.setProperty(key, data[key])
+      
+    }
+    
+  }
+
   public setTarget(target:HTMLElement | string | null){
     
     if(!target) return

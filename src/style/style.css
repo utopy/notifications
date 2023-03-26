@@ -1,10 +1,13 @@
 :root{
 
-  --module: 20px;  
-  --padding: var(--module);
-  --gap: var(--module);
-  --max-card-width: 600px;
+  --un-module: 20px;  
+  --un-padding: var(--un-module);
+  --un-gap: var(--un-module);
+  --un-max-card-width: 600px;
 
+  --un-primary-color: #0C2340;
+  --un-background-color: white;
+  --un-negative-color: white;
 }
 
 .un-wrapper{
@@ -15,11 +18,10 @@
   left: 0;
   right: 0;
   z-index: 10000;
-  background: red;
-  padding: var(--padding);
+  padding: var(--un-padding);
   display: flex;
   flex-direction: column;
-  gap: var(--gap);
+  gap: var(--un-gap);
   pointer-events: unset;
   
 }
@@ -50,13 +52,13 @@ h3.un-title{
   flex: 1;
   font-size: 25px !important;
   margin: 0;
-  padding: var(--padding);
+  padding: var(--un-padding);
 
 }
 
 div.un-close-button{
 
-  padding: var(--padding);
+  padding: var(--un-padding);
   display: flex;
   flex: 0;
   align-items: center;
@@ -81,23 +83,26 @@ div.un-close-button{
   left: 0;
   right: 0;
   display: flex;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(1px);
   
 }
 
 .un-card{
 
-  max-width: var(--max-card-width);
+  max-width: var(--un-max-card-width);
   width: 100%;
   height: auto;
   margin: auto;
   background: #EDEDED;
   border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
 .un-card-body{
   
-  padding: var(--padding);
+  padding: var(--un-padding);
   margin: 0;
 
 }
@@ -109,18 +114,20 @@ div.un-close-button{
 
 .un-card-actions{
   display: flex;
-  gap: var(--gap);
-  padding: var(--padding);
+  gap: var(--un-gap);
+  padding: var(--un-padding);
   flex-direction: row-reverse;
 }
 
 .un-card-action{
   padding: 10px 20px;
   cursor: pointer;
+  border: 0;
+  border-radius: 7px;
 }
 
-.un-card-action{
-  padding: 10px 20px;
-  cursor: pointer;
+.un-card-action-confirm{
+  background: var(--un-primary-color);
+  color: var(--un-negative-color) !important;
 }
 
