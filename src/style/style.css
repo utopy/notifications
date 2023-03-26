@@ -1,0 +1,126 @@
+:root{
+
+  --module: 20px;  
+  --padding: var(--module);
+  --gap: var(--module);
+  --max-card-width: 600px;
+
+}
+
+.un-wrapper{
+
+  position: fixed;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: red;
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  pointer-events: unset;
+  
+}
+
+
+/*
+
+  NOTIFICATION STYLES
+  
+*/
+
+.un-container{
+
+  border: 1px solid;
+
+}
+
+.un-title-container{
+  
+  display: flex;
+  gap: 10px;
+  
+}
+
+
+h3.un-title{
+
+  flex: 1;
+  font-size: 25px !important;
+  margin: 0;
+  padding: var(--padding);
+
+}
+
+div.un-close-button{
+
+  padding: var(--padding);
+  display: flex;
+  flex: 0;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/*
+
+  NOTIFICATION CARD STYLES
+  
+*/
+
+.un-card-container{
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  display: flex;
+  
+}
+
+.un-card{
+
+  max-width: var(--max-card-width);
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background: #EDEDED;
+  border-radius: 10px;
+
+}
+
+.un-card-body{
+  
+  padding: var(--padding);
+  margin: 0;
+
+}
+
+.un-card-container .un-title-container{
+
+  
+}
+
+.un-card-actions{
+  display: flex;
+  gap: var(--gap);
+  padding: var(--padding);
+  flex-direction: row-reverse;
+}
+
+.un-card-action{
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.un-card-action{
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
